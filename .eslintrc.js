@@ -42,7 +42,8 @@ module.exports = {
     'newline-before-return': 'error',
     'no-console': 'warn',
     'require-yield': 'error',
-    "import/no-unresolved": [0],
+    'import/no-unresolved': [0],
+    'react/jsx-props-no-spreading': [0],
 
     // @typescript-eslint
     '@typescript-eslint/explicit-function-return-type': 'off',

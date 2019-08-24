@@ -8,18 +8,20 @@ interface Props {
 
 class App extends React.Component<Props> {
   static async getInitialProps(): Promise<Props> {
-    return { title: 'Hello world' }
+    return { title: 'Hello world' };
   }
 
   render() {
+    const { title } = this.props;
+
     return (
       <>
         <Head>
-          <title>{this.props.title}</title>
+          <title>{title}</title>
         </Head>
         <Component />
       </>
-    )
+    );
   }
 }
 
