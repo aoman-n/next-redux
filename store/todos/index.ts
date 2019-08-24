@@ -23,9 +23,13 @@ const reducer = (state: State = initialState(), action: Action) => {
         ...state,
         todos: [...state.todos, action.payload],
       };
-    case ActionTypes.DONE_TODO:
-      const newTodos = state.todos.map(todo => (todo.id === action.payload.id ? { ...todo, done: true } : todo));
+    case ActionTypes.DONE_TODO: {
+      const newTodos = state.todos.map(todo =>
+        todo.id === action.payload.id ? { ...todo, done: true } : todo,
+      );
+
       return { ...state, todos: newTodos };
+    }
     default:
       return state;
   }
