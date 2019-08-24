@@ -1,0 +1,29 @@
+{
+  "name": "next-type",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^8.0.3",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "@types/next": "^8.0.6",
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "@types/styled-components": "^4.1.18",
+    "@zeit/next-typescript": "^1.1.1",
+    "babel-plugin-styled-components": "^1.10.6",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  }
+}
