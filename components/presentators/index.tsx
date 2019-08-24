@@ -1,14 +1,12 @@
 import React from 'react';
 import { NextFC } from 'next';
 import styled from 'styled-components';
-
-// interface Props {
-//   className?: string;
-// }
+import Counter from '../containers/counterContainer';
 
 const Component: NextFC = () => (
   <>
     <Title>Welcome yeaaaah!!!</Title>
+    <Counter />
   </>
 );
 

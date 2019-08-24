@@ -63,4 +63,4 @@ const theme: StyleClosetTheme = {
   secondaryColors
 };
 
-export { theme, StyleClosetTheme };
+export { theme };
