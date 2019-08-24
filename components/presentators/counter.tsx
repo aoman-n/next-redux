@@ -7,12 +7,7 @@ interface Props {
   onClickSetCount: (amount: number) => void;
 }
 
-const Counter: FC<Props> = ({
-  count,
-  onClickDecrement,
-  onClickIncrement,
-  onClickSetCount,
-}) => (
+const Counter: FC<Props> = ({ count, onClickDecrement, onClickIncrement, onClickSetCount }) => (
   <>
     <div>カウンター: {count}</div>
     <div>

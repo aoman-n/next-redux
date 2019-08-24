@@ -7,7 +7,7 @@ interface State {
 
 export const initialState = (injects?: State): State => ({
   count: 0,
-  ...injects
+  ...injects,
 });
 
 const reducer = (state: State = initialState(), action: Action): State => {

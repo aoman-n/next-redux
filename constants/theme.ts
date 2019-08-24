@@ -12,7 +12,7 @@ const colors = {
   grey30: '#c2c6cc',
   grey40: '#9ea2a8',
   grey50: '#686c73',
-  grey60: '#30363d'
+  grey60: '#30363d',
 };
 
 const secondaryColors = {
@@ -40,7 +40,7 @@ const secondaryColors = {
   gold20: '#ffda8b',
   gold30: '#f0b95b',
   gold40: '#e5a229',
-  gold50: '#6a4a24'
+  gold50: '#6a4a24',
 };
 
 const breakpoints = ['31.25em', '43.75em', '46.875em'];
@@ -60,7 +60,7 @@ const theme: StyleClosetTheme = {
   fontSizes,
   space,
   colors,
-  secondaryColors
+  secondaryColors,
 };
 
 export { theme };

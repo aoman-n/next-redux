@@ -13,7 +13,7 @@ interface State {
 
 export const initialState = (injects?: State) => ({
   todos: [],
-  ...injects
+  ...injects,
 });
 
 const reducer = (state: State = initialState(), action: Action) => {
@@ -21,12 +21,10 @@ const reducer = (state: State = initialState(), action: Action) => {
     case ActionTypes.ADD_TODO:
       return {
         ...state,
-        todos: [...state.todos, action.payload]
+        todos: [...state.todos, action.payload],
       };
     case ActionTypes.DONE_TODO:
-      const newTodos = state.todos.map(todo =>
-        todo.id === action.payload.id ? { ...todo, done: true } : todo
-      );
+      const newTodos = state.todos.map(todo => (todo.id === action.payload.id ? { ...todo, done: true } : todo));
       return { ...state, todos: newTodos };
     default:
       return state;

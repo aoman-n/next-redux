@@ -23,9 +23,7 @@ const Container: FC = () => {
     dispatch(actions.setCount(amount));
   }, []);
 
-  return (
-    <Component {...{ count, onClickDecrement, onClickIncrement, onClickSetCount }} />
-  )
-}
+  return <Component {...{ count, onClickDecrement, onClickIncrement, onClickSetCount }} />;
+};
 
 export default Container;

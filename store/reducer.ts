@@ -4,10 +4,10 @@ import todos, { initialState as todoState } from './todos';
 
 export const initialState = () => ({
   counter: counterState(),
-  todos: todoState()
+  todos: todoState(),
 });
 
 export default combineReducers({
   counter,
-  todos
+  todos,
 });

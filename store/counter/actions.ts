@@ -9,6 +9,6 @@ export function decrement() {
 export function setCount(amount: number) {
   return {
     type: types.SET_COUNT,
-    payload: { amount }
+    payload: { amount },
   };
 }

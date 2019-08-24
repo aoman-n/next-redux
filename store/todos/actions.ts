@@ -6,11 +6,11 @@ export const addTodo = (task: string) => ({
   payload: {
     id: uuid(),
     done: false,
-    task
-  }
+    task,
+  },
 });
 
 export const doneTodo = (id: string) => ({
   type: actionTypes.DONE_TODO,
-  payload: { id }
+  payload: { id },
 });
