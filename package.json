@@ -6,23 +6,34 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "prettier": "prettier './components/**/*.tsx' './store/**/*.ts' --write"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "next": "^8.0.3",
+    "next-redux-wrapper": "^3.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "styled-components": "^4.3.2"
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.4",
+    "styled-components": "^4.3.2",
+    "uuid": "^3.3.3"
   },
   "devDependencies": {
     "@types/next": "^8.0.6",
+    "@types/next-redux-wrapper": "^2.0.2",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
+    "@types/react-redux": "^7.1.2",
+    "@types/redux": "^3.6.0",
     "@types/styled-components": "^4.1.18",
+    "@types/uuid": "^3.4.5",
     "@zeit/next-typescript": "^1.1.1",
     "babel-plugin-styled-components": "^1.10.6",
+    "prettier": "^1.18.2",
+    "redux-devtools-extension": "^2.13.8",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3"
   }

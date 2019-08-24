@@ -1,10 +1,13 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import App, { Container, NextAppContext } from 'next/app';
+import withRedux from 'next-redux-wrapper'
 import { ThemeProvider } from 'styled-components';
 
+import { initStore } from '../store';
 import { theme } from '../constants/theme';
 
-export default class extends App {
+class AppComponent extends App {
   static async getInitialProps({ Component, ctx }: NextAppContext) {
     let pageProps = {};
     if(Component.getInitialProps) {
@@ -14,14 +17,18 @@ export default class extends App {
   }
 
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps, store } = this.props;
 
     return (
-      <ThemeProvider theme={theme}>
         <Container>
-          <Component { ...pageProps } />
+          <Provider store={store}>
+            <ThemeProvider theme={theme}>
+              <Component { ...pageProps } />
+            </ThemeProvider>
+          </Provider>
         </Container>
-      </ThemeProvider>
     )
   }
 }
+
+export default withRedux(initStore)(AppComponent);
