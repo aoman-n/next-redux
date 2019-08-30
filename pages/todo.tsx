@@ -1,5 +1,7 @@
 import React from 'react';
-import { NextFC, NextContext } from 'next';
+import { NextFC } from 'next';
+import { withRouter } from 'next/router';
+import { WithRouterProps } from 'next/dist/client/with-router';
 import Head from 'next/head';
 
 import Todos from '../components/presentators/Todos';
@@ -8,21 +10,15 @@ interface Props {
   title: string;
 }
 
-const TodosPage: NextFC<Props> = ({ title }) => {
+const TodosPage: NextFC<Props & WithRouterProps> = ({ router }) => {
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>{router.query.title}</title>
       </Head>
       <Todos />
     </>
   );
 };
 
-TodosPage.getInitialProps = async (ctx: any) => {
-  const { title } = ctx.query;
-
-  return { title };
-};
-
-export default TodosPage;
+export default withRouter(TodosPage);
