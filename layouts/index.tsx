@@ -2,7 +2,7 @@ import React from 'react';
 import { Head, Main, NextScript } from 'next/document';
 
 export default () => (
-  <html>
+  <html lang="ja">
     <Head />
     <body>
       <Main />

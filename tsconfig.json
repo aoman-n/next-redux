@@ -1,25 +1,40 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "jsx": "preserve",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noUnusedParameters": false,
     "strict": true,
-    "esModuleInterop": true,
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "jsx": "preserve",
     "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
     "skipLibCheck": true,
+    "baseUrl": ".",
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
+    "esModuleInterop": true,
+    "importHelpers": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
     "resolveJsonModule": true,
+    "strictNullChecks": true,
+    "noEmit": false,
+    "module": "commonjs",
+    "target": "es2017",
+    "lib": [
+      "es2017"
+    ],
+    "outDir": ".next/server",
     "isolatedModules": true
   },
   "include": [
+    "server/**/*.ts",
     "types/**.*",
     "store/**/*",
     "pages/**/*",
@@ -27,6 +42,6 @@
     "components/**/*"
   ],
   "exclude": [
-    "node_modules"
+    ".next"
   ]
 }

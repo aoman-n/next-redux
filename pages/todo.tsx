@@ -1,7 +1,6 @@
 import React from 'react';
 import { NextFC } from 'next';
-import { withRouter } from 'next/router';
-import { WithRouterProps } from 'next/dist/client/with-router';
+import { WithRouterProps, withRouter } from 'next/router';
 import Head from 'next/head';
 
 import Todos from '../components/presentators/Todos';
@@ -14,7 +13,7 @@ const TodosPage: NextFC<Props & WithRouterProps> = ({ router }) => {
   return (
     <>
       <Head>
-        <title>{router.query.title}</title>
+        <title>{router && router.query && router.query.title}</title>
       </Head>
       <Todos />
     </>
